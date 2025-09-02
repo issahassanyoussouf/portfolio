@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Accueil</title>
+
+    <!-- Fonts & icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">Bienvenue sur mon portfolio</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link">À propos</a></li>
+                    <li><a href="skills.html" class="nav-link">Compétences</a></li>
+                    <li><a href="certif.html" class="nav-link">Attestations</a></li>
+                    <li><a href="projects.html" class="nav-link">Projets</a></li>
+                    <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero reveal">
+            <div class="container hero-grid">
+                <div class="hero-card glass">
+                    <img src="19.jpg" alt="Photo de profil" class="profile-pic">
+                    <h1>Issa Hassan Youssouf</h1>
+                    <p class="tagline">Étudiant en Réseau et Sécurité, passionné par la cybersécurité, la
+                        protection des systèmes, l’analyse de vulnérabilités et l'administration réseau.
+                    </p>
+                    <div class="hero-cta">
+                        <a class="btn" href="projects.html">Voir mes projets</a>
+                        <a class="btn ghost" href="about.html">En savoir plus</a>
+                    </div>
+
+                    <div class="socials">
+                        <a href="mailto:issahasyouf68@yahoo.com" target="_blank" aria-label="Envoyer un e-mail">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/issahassanyoussouf" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/issahassanyoussouf" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/IssaHassanYouf" target="_blank" aria-label="Twitter"><i
+                                class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-info reveal">
+                    <h2>Projets récents</h2>
+                    <div class="projects-preview">
+                        <article class="card">
+                            <img src="Projet calculateur de prêt.jpg" alt="Project 1">
+                            <div class="card-body">
+                                <h3>Calculateur de prêt hypothécaire</h3>
+                                <p>Langages utilse Html, CSS et JavaScrip. Il permet de calculer le prêt avec un taux
+                                    dinteret et une dure annuelle.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="Projet Cisco.png" alt="Project 2">
+                            <div class="card-body">
+                                <h3>Tp sur Packet Tracer</h3>
+                                <p>Configuration VLAN, OSPF, RIP, DHCP, VTP, redistribution de routes et tests de
+                                    connectivité. Simulation Packet Tracer complète.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="Projet DVWA.png" alt="Project 3">
+                            <div class="card-body">
+                                <h3>Laboratoire DVWA sur Kali</h3>
+                                <p>Installation, configuration et exercices de pentesting.</p>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="Projet Wires.png" alt="Project 4">
+                            <div class="card-body">
+                                <h3>Analyse réseau Wireshark</h3>
+                                <p>Capture et analyse DNS / HTTP / TLS. Rapport d'incidents et recommandations.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- petit aperçu compétences -->
+        <section class="container reveal">
+            <h2>Compétences</h2>
+            <div class="skill-strip">
+                <span>HTML / CSS / JS</span><span>•</span>
+                <span>Linux (Kali, Ubuntu, Parrot)/Windows</span><span>•</span>
+                <span>Réseaux (Cisco)</span><span>•</span>
+                <span>Cybersécurité</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 Issa Hassan Youssouf</p>
+            <div class="socials small">
+                <a href="issahasyouf68@yahoo.com" target="_blank" aria-label="Envoyer un e-mail">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/issahassanyoussouf" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/issahassanyoussouf" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/IssaHassanYouf" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="topBtn" class="top-btn" title="Retour en haut" aria-label="Retour en haut">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">Bienvenue sur mon portfolio</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link">À propos</a></li>
+                    <li><a href="skills.html" class="nav-link">Compétences</a></li>
+                    <li><a href="certif.html" class="nav-link">Attestations</a></li>
+                    <li><a href="projects.html" class="nav-link">Projets</a></li>
+                    <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container glass-panel reveal">
+            <h1>Contactez-moi</h1>
+            <p>Vous pouvez me contacter en remplissant le formulaire ci-dessous. Je m’efforce de répondre dans les plus
+                brefs délais.
+            </p>
+
+            <form id="contactForm" class="contact-form" novalidate>
+                <label for="name">Nom</label>
+                <input id="name" type="text" placeholder="Votre nom complet" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Votre email" required>
+
+                <label for="subject">Sujet</label>
+                <input id="subject" type="text"
+                    placeholder="Motifs pour lesquels vous pourriez souhaiter me contacter (Optionnel)">
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="6" placeholder="Votre messages..." required></textarea>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">Envoyer</button>
+                    <button type="reset" class="btn ghost">Effacer</button>
+                </div>
+
+                <p id="formMsg" class="form-msg" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 Issa Hassan Youssouf</p>
+            <div class="socials small">
+                <a href="issahasyouf68@yahoo.com" target="_blank" aria-label="Envoyer un e-mail">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/issahassanyoussouf" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/issahassanyoussouf" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/IssaHassanYouf" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="topBtn" class="top-btn" title="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+</body>
+
+</html>
