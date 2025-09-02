@@ -41,16 +41,16 @@
 
                 <label for="name">Nom</label>
                 <input id="name" name="name" type="text" placeholder="Votre nom complet" required>
-                
+
                 <label for="email">Email</label>
-                <input id="email" type="email" placeholder="Votre email" required>
+                <input id="email" name="email" type="email" placeholder="Votre email" required>
 
                 <label for="subject">Sujet</label>
-                <input id="subject" type="text"
+                <input id="subject" name="subject" type="text"
                     placeholder="Motifs pour lesquels vous pourriez souhaiter me contacter (Optionnel)">
 
                 <label for="message">Message</label>
-                <textarea id="message" rows="6" placeholder="Votre messages..." required></textarea>
+                <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
 
                 <div class="form-actions">
                     <button type="submit" class="btn">Envoyer</button>
@@ -59,6 +59,7 @@
 
                 <p id="formMsg" class="form-msg" aria-live="polite"></p>
             </form>
+
         </section>
     </main>
 
