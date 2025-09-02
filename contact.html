@@ -37,10 +37,11 @@
                 brefs délais.
             </p>
 
-            <form id="contactForm" class="contact-form" novalidate>
-                <label for="name">Nom</label>
-                <input id="name" type="text" placeholder="Votre nom complet" required>
+            <form action="https://formspree.io/f/mvgbbkqq" method="POST" class="contact-form" id="contactForm">
 
+                <label for="name">Nom</label>
+                <input id="name" name="name" type="text" placeholder="Votre nom complet" required>
+                
                 <label for="email">Email</label>
                 <input id="email" type="email" placeholder="Votre email" required>
 
