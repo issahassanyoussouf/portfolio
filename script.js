@@ -1,4 +1,4 @@
-/* script.js — validation formulaire, top button, reveal on scroll, active nav */
+/* script.js — validation formulaire, top button, reveal on scroll, active nav, menu burger */
 
 document.addEventListener('DOMContentLoaded', function () {
   // 1) Active nav link
@@ -59,6 +59,16 @@ document.addEventListener('DOMContentLoaded', function () {
         msgEl.textContent = 'Merci ' + name + ' votre message a bien été envoyé. Je vous répondrai dans les plus brefs délais!';
         form.reset();
       }, 900);
+    });
+  }
+
+  // 5) Menu burger pour mobile
+  const burger = document.getElementById('burger');
+  const nav = document.querySelector('.nav-links');
+  if (burger && nav) {
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      burger.classList.toggle('active');
     });
   }
 });

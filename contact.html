@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Contact</title>
 
+    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 
 <body>
+    <!-- 🔹 HEADER -->
     <header class="site-header">
         <div class="container header-inner">
             <div class="brand">Bienvenue sur mon portfolio</div>
@@ -24,19 +28,22 @@
                     <li><a href="certif.html" class="nav-link">Attestations</a></li>
                     <li><a href="projects.html" class="nav-link">Projets</a></li>
                     <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- 🔹 MAIN CONTENT -->
     <main>
         <section class="container glass-panel reveal">
             <h1>Contactez-moi</h1>
-            <p>Vous pouvez me contacter en remplissant le formulaire ci-dessous. Je m’efforce de répondre dans les plus
-                brefs délais.
+            <p>
+                Vous pouvez me contacter en remplissant le formulaire ci-dessous.
+                Je m’efforce de répondre dans les plus brefs délais.
             </p>
 
+            <!-- Contact Form -->
             <form action="https://formspree.io/f/mvgbbkqq" method="POST" class="contact-form" id="contactForm">
 
                 <label for="name">Nom</label>
@@ -52,6 +59,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
 
+                <!-- Actions -->
                 <div class="form-actions">
                     <button type="submit" class="btn">Envoyer</button>
                     <button type="reset" class="btn ghost">Effacer</button>
@@ -59,10 +67,10 @@
 
                 <p id="formMsg" class="form-msg" aria-live="polite"></p>
             </form>
-
         </section>
     </main>
 
+    <!-- 🔹 FOOTER -->
     <footer class="site-footer">
         <div class="container">
             <p>© 2025 Issa Hassan Youssouf</p>
@@ -70,23 +78,26 @@
                 <a href="mailto:issahasyouf68@yahoo.com" target="_blank" aria-label="Envoyer un e-mail">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://github.com/issahassanyoussouf" target="_blank">
+                <a href="https://github.com/issahassanyoussouf" target="_blank" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/issahassanyoussouf" target="_blank">
+                <a href="https://linkedin.com/in/issahassanyoussouf" target="_blank" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://x.com/IssaHassanYouf" target="_blank">
+                <a href="https://x.com/IssaHassanYouf" target="_blank" aria-label="Twitter (X)">
                     <i class="fab fa-x-twitter"></i>
                 </a>
-                <a href="https://facebook.com/issahassanyoussouf00" target="_blank">
+                <a href="https://facebook.com/issahassanyoussouf00" target="_blank" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
             </div>
         </div>
     </footer>
 
-    <button id="topBtn" class="top-btn" title="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+    <!-- 🔹 TOP BUTTON -->
+    <button id="topBtn" class="top-btn" title="Retour en haut">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 </body>
 
 </html>
