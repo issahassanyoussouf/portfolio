@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
       const name = document.getElementById('name')?.value.trim();
       const email = document.getElementById('email')?.value.trim();
       const message = document.getElementById('message')?.value.trim();
-      // simple email regex
       const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!name || !email || !message) {
         msgEl.textContent = 'Veuillez remplir tous les champs obligatoires.';
@@ -52,11 +51,10 @@ document.addEventListener('DOMContentLoaded', function () {
         msgEl.style.color = '#ffb4b4';
         return;
       }
-      // simulate send
       msgEl.style.color = '#bfe9ff';
       msgEl.textContent = 'Envoi en cours…';
       setTimeout(() => {
-        msgEl.textContent = 'Merci ' + name + ' votre message a bien été envoyé. Je vous répondrai dans les plus brefs délais!';
+        msgEl.textContent = `Merci ${name}, votre message a bien été envoyé. Je vous répondrai dans les plus brefs délais!`;
         form.reset();
       }, 900);
     });
@@ -65,10 +63,21 @@ document.addEventListener('DOMContentLoaded', function () {
   // 5) Menu burger pour mobile
   const burger = document.getElementById('burger');
   const nav = document.querySelector('.nav-links');
+
   if (burger && nav) {
     burger.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      burger.classList.toggle('active');
+      const isOpen = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', isOpen); // accessibilité
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          burger.setAttribute('aria-expanded', false);
+        }
+      });
     });
   }
 });
