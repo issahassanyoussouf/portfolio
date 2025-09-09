@@ -340,23 +340,101 @@ section {
   font-weight: 600;
 }
 
-/* footer */
+/* ---- Footer amélioré ---- */
 .site-footer {
-  padding: 20px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.02);
-  background: linear-gradient(180deg, transparent, rgba(2, 6, 23, 0.3));
+  padding: 32px 0 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, transparent, rgba(2, 6, 23, 0.7));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Ligne animée décorative */
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: moveLine 6s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes moveLine {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+/* Texte footer */
 .site-footer p {
-  margin: 0 0 8px 0;
+  margin: 0;
+  font-size: 0.95rem;
   color: var(--muted);
   text-align: center;
+  order: 1;
+  letter-spacing: 0.3px;
+}
+
+/* Icônes sociales */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  order: 2;
+  flex-wrap: wrap;
 }
 
 .socials a {
   color: var(--accent);
-  margin-right: 12px;
+  font-size: 1.5rem;
   text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+  position: relative;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.6s forwards;
+}
+
+/* Animation d’apparition */
+.socials a:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.socials a:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.socials a:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.socials a:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Effet néon */
+.socials a:hover {
+  color: #fff;
+  transform: translateY(-4px) scale(1.15);
+  text-shadow: 0 0 8px var(--accent), 0 0 15px var(--accent);
 }
 
 /* top button */
@@ -495,11 +573,13 @@ section {
     bottom: 14px;
   }
 
-  .socials.small {
+  .socials {
     justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 16px;
+  }
+
+  .socials a {
+    font-size: 1.7rem;
   }
 }
 
