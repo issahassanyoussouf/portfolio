@@ -60,11 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 5) Menu burger pour mobile
+  // 5) Menu burger pour mobile (à gauche)
   const burger = document.getElementById('burger');
   const nav = document.querySelector('.nav-links');
 
   if (burger && nav) {
+    // Toggle ouverture/fermeture
     burger.addEventListener('click', () => {
       const isOpen = nav.classList.toggle('open');
       burger.setAttribute('aria-expanded', isOpen); // accessibilité
