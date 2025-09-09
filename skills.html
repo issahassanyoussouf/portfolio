@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Compétences</title>
 
+    <!-- SEO -->
+    <meta name="description"
+        content="Compétences et expériences de stage d'Issa Hassan Youssouf : Réseaux, cybersécurité, développement web, systèmes et simulations Packet Tracer.">
+
+    <!-- Fonts et Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Styles et Script -->
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
@@ -17,6 +24,12 @@
     <header class="site-header">
         <div class="container header-inner">
             <div class="brand">Bienvenue sur mon portfolio</div>
+
+            <!-- Bouton burger pour mobile -->
+            <button id="burger" class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
@@ -40,24 +53,24 @@
                 <div class="skill-card glass">
                     <h3>Stage académique chez Startech Academy</h3>
                     <p>
-                        HTML • TCP/IP • Configuration VLAN, OSPF, RIP, DHCP, VTP • Redistribution de routes
-                        et tests de connectivité • Simulation Packet Tracer complète
+                        Mise en pratique de : HTML • TCP/IP • Configuration VLAN, OSPF, RIP, DHCP, VTP • Redistribution
+                        de routes • Tests de connectivité • Simulation Packet Tracer complète...
                     </p>
                 </div>
 
                 <div class="skill-card glass">
                     <h3>Stagiaire en Cybersécurité chez Future Interns</h3>
                     <p>
-                        Test de vulnérabilités sur applications web • Monitoring d’alertes et simulation
-                        d’incidents • Conception d’un système de partage sécurisé
+                        Réalisation de tests de vulnérabilités web • Monitoring d’alertes et gestion d’incidents simulés
+                        • Conception d’un système de partage sécurisé.
                     </p>
                 </div>
 
                 <div class="skill-card glass">
-                    <h3>Stagiaire en Cybersécurité chez Redynox</h3>
+                    <h3>Stagiaire en Cybersécurité - Redynox</h3>
                     <p>
-                        Introduction aux bases de réseau • Surveiller le trafic réseau avec Wireshark •
-                        Introduction à la sécurité des applications Web • Analyse de vulnérabilité de base
+                        Introduction aux réseaux • Analyse de trafic avec Wireshark • Sécurité des applications web •
+                        Analyse basique de vulnérabilités.
                     </p>
                 </div>
             </div>
@@ -65,30 +78,30 @@
 
         <!-- Section Compétences -->
         <section class="container reveal">
-            <h1>Compétences</h1>
+            <h1>Compétences techniques</h1>
             <div class="grid skills-grid">
                 <div class="skill-card glass">
-                    <h3>Développement Web</h3>
+                    <h3><i class="fas fa-code"></i> Développement Web</h3>
                     <p>HTML5 • CSS3 • JavaScript</p>
-                    <div class="progress"><span style="width:70%"></span></div>
+                    <div class="progress"><span style="width:60%"></span></div>
                 </div>
 
                 <div class="skill-card glass">
-                    <h3>Systèmes</h3>
+                    <h3><i class="fas fa-server"></i> Systèmes</h3>
                     <p>Linux (Kali, Ubuntu, Parrot) • Windows</p>
                     <div class="progress"><span style="width:60%"></span></div>
                 </div>
 
                 <div class="skill-card glass">
-                    <h3>Réseaux</h3>
+                    <h3><i class="fas fa-project-diagram"></i> Réseaux</h3>
                     <p>TCP/IP • VLAN • OSPF • RIP • DHCP • VTP • Packet Tracer</p>
                     <div class="progress"><span style="width:75%"></span></div>
                 </div>
 
                 <div class="skill-card glass">
-                    <h3>Cybersécurité</h3>
-                    <p>Wireshark • Burp Suite • DVWA</p>
-                    <div class="progress"><span style="width:55%"></span></div>
+                    <h3><i class="fas fa-lock"></i> Cybersécurité</h3>
+                    <p>Wireshark • Burp Suite • DVWA • OWASP ZAP</p>
+                    <div class="progress"><span style="width:65%"></span></div>
                 </div>
             </div>
         </section>
@@ -102,16 +115,16 @@
                 <a href="mailto:issahasyouf68@yahoo.com" target="_blank" aria-label="Envoyer un e-mail">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://github.com/issahassanyoussouf" target="_blank">
+                <a href="https://github.com/issahassanyoussouf" target="_blank" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/issahassanyoussouf" target="_blank">
+                <a href="https://linkedin.com/in/issahassanyoussouf" target="_blank" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://x.com/IssaHassanYouf" target="_blank">
+                <a href="https://x.com/IssaHassanYouf" target="_blank" aria-label="X (Twitter)">
                     <i class="fab fa-x-twitter"></i>
                 </a>
-                <a href="https://facebook.com/issahassanyoussouf00" target="_blank">
+                <a href="https://facebook.com/issahassanyoussouf00" target="_blank" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
             </div>
@@ -119,7 +132,7 @@
     </footer>
 
     <!-- Back to top -->
-    <button id="topBtn" class="top-btn" title="Retour en haut">
+    <button id="topBtn" class="top-btn" title="Retour en haut" aria-label="Retour en haut">
         <i class="fas fa-chevron-up"></i>
     </button>
 </body>

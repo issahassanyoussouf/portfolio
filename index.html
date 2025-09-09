@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Accueil</title>
 
-    <!-- Fonts & icons -->
+    <!-- Fonts et icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- Styles et Script -->
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
@@ -19,11 +20,12 @@
         <div class="container header-inner">
             <div class="brand">Bienvenue sur mon portfolio</div>
 
-            <!-- 🔽 Bouton burger pour mobile -->
+            <!-- Bouton burger -->
             <button id="burger" class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
 
+            <!-- Navigation -->
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
@@ -38,11 +40,12 @@
         </div>
     </header>
 
+    <!-- Main -->
     <main>
         <section class="hero reveal">
             <div class="container hero-grid">
                 <div class="hero-card glass">
-                    <img src="19.jpg" alt="Photo de profil" class="profile-pic">
+                    <img src="19.jpg" alt="Mon Photo de profil" class="profile-pic">
                     <h1>Issa Hassan Youssouf</h1>
                     <p class="tagline">Étudiant en Réseau et Sécurité, passionné par la cybersécurité, la
                         protection des systèmes, l’analyse de vulnérabilités et l'administration réseau.
@@ -75,7 +78,8 @@
                     <h2>Projets récents</h2>
                     <div class="projects-preview">
                         <article class="card">
-                            <img src="Projet calculateur de prêt.jpg" alt="Project 1">
+                            <img src="Projet calculateur de prêt.jpg"
+                                alt="Capture d’écran d’un projet calculateur de prêt">
                             <div class="card-body">
                                 <h3>Calculateur de prêt hypothécaire</h3>
                                 <p>Langages utilse Html, CSS et JavaScrip. Il permet de calculer le prêt avec un taux
@@ -85,7 +89,7 @@
                         </article>
 
                         <article class="card">
-                            <img src="Projet Cisco.png" alt="Project 2">
+                            <img src="Projet Cisco.png" alt="Capture d’écran d’un projet sur Packet Tracer">
                             <div class="card-body">
                                 <h3>Tp sur Packet Tracer</h3>
                                 <p>Configuration VLAN, OSPF, RIP, DHCP, VTP, redistribution de routes et tests de
@@ -95,7 +99,7 @@
                         </article>
 
                         <article class="card">
-                            <img src="Projet DVWA.png" alt="Project 3">
+                            <img src="Projet DVWA.png" alt="Capture d’écran d’un Lab sur Damn Vulnerable Web Application">
                             <div class="card-body">
                                 <h3>Laboratoire DVWA sur Kali</h3>
                                 <p>Installation, configuration et exercices de pentesting.</p>
@@ -103,7 +107,7 @@
                         </article>
 
                         <article class="card">
-                            <img src="Projet Wires.png" alt="Project 4">
+                            <img src="Projet Wires.png" alt="Capture d’écran d’un Lab sur Wireshark pour l’analyse réseau">
                             <div class="card-body">
                                 <h3>Analyse réseau Wireshark</h3>
                                 <p>Capture et analyse DNS / HTTP / TLS. Rapport d'incidents et recommandations.</p>
@@ -126,6 +130,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <p>© 2025 Issa Hassan Youssouf</p>
@@ -149,6 +154,7 @@
         </div>
     </footer>
 
+    <!-- Back to top -->
     <button id="topBtn" class="top-btn" title="Retour en haut" aria-label="Retour en haut">
         <i class="fas fa-chevron-up"></i>
     </button>

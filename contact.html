@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Contact</title>
 
-    <!-- Fonts & Icons -->
+    <!-- Fonts et Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -16,12 +16,18 @@
 </head>
 
 <body>
-    <!-- 🔹 HEADER -->
+    <!--  HEADER -->
     <header class="site-header">
         <div class="container header-inner">
             <div class="brand">Bienvenue sur mon portfolio</div>
+
+            <!-- Menu burger -->
+            <div class="burger" id="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <nav>
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li><a href="about.html" class="nav-link">À propos</a></li>
                     <li><a href="skills.html" class="nav-link">Compétences</a></li>
@@ -34,7 +40,7 @@
         </div>
     </header>
 
-    <!-- 🔹 MAIN CONTENT -->
+    <!-- MAIN CONTENT -->
     <main>
         <section class="container glass-panel reveal">
             <h1>Contactez-moi</h1>
@@ -53,8 +59,7 @@
                 <input id="email" name="email" type="email" placeholder="Votre email" required>
 
                 <label for="subject">Sujet</label>
-                <input id="subject" name="subject" type="text"
-                    placeholder="Motifs pour lesquels vous pourriez souhaiter me contacter (Optionnel)">
+                <input id="subject" name="subject" type="text" placeholder="Motif de votre message (optionnel)">
 
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
@@ -70,7 +75,7 @@
         </section>
     </main>
 
-    <!-- 🔹 FOOTER -->
+    <!--  FOOTER -->
     <footer class="site-footer">
         <div class="container">
             <p>© 2025 Issa Hassan Youssouf</p>
@@ -94,7 +99,7 @@
         </div>
     </footer>
 
-    <!-- 🔹 TOP BUTTON -->
+    <!--  TOP BUTTON -->
     <button id="topBtn" class="top-btn" title="Retour en haut">
         <i class="fas fa-chevron-up"></i>
     </button>

@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>À propos</title>
 
+    <!-- SEO -->
+    <meta name="description"
+        content="À propos d'Issa Hassan Youssouf - Étudiant en Réseau et Sécurité, passionné par la cybersécurité, le pentesting et l'administration réseau.">
+
+    <!-- Fonts et Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Styles et Script -->
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
@@ -16,6 +23,12 @@
     <header class="site-header">
         <div class="container header-inner">
             <div class="brand">Bienvenue sur mon portfolio</div>
+
+            <!-- Bouton burger pour mobile -->
+            <button id="burger" class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
@@ -34,7 +47,7 @@
         <section class="container glass-panel reveal">
             <div class="about-grid">
                 <div>
-                    <img src="19.jpg" alt="Photo de profil" class="profile-pic about-pic">
+                    <img src="19.jpg" alt="Mon photo de profil d’à propos" class="profile-pic about-pic">
                 </div>
                 <div>
                     <h1>Qui suis-je ?</h1>
@@ -48,17 +61,18 @@
                     <h3>Objectif</h3>
                     <p>
                         Devenir ingénieur en cybersécurité spécialisé en pentesting et en sécurisation
-                        d’infrastructures et contribuer à un monde numérique plus sûr.
+                        d’infrastructures afin de contribuer à un monde numérique plus sûr.
                     </p>
 
                     <h3>Compétences clés</h3>
                     <ul class="check-list">
-                        <li>Administration Linux (Basique) et Windows Server</li>
-                        <li>Analyse réseau (Wireshark)</li>
-                        <li>Monitoring d’alertes et simulation d’incidents (Splunk)</li>
-                        <li>Analyse des vulnérabilités de base (OWASP ZAP)</li>
-                        <li>Tests d’intrusion (DVWA, WebGoat, Burp Suite)</li>
-                        <li>Conception de topologies réseau (Packet Tracer / Cisco)</li>
+                        <li><i class="fas fa-check-circle"></i> Administration Linux (bases) et Windows Server</li>
+                        <li><i class="fas fa-check-circle"></i> Analyse réseau (Wireshark)</li>
+                        <li><i class="fas fa-check-circle"></i> Surveillance des alertes (Splunk)</li>
+                        <li><i class="fas fa-check-circle"></i> Analyse basique des vulnérabilités (OWASP ZAP)</li>
+                        <li><i class="fas fa-check-circle"></i> Tests d’intrusion (DVWA, WebGoat, Burp Suite)</li>
+                        <li><i class="fas fa-check-circle"></i> Conception de topologies réseau
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -72,23 +86,24 @@
                 <a href="mailto:issahasyouf68@yahoo.com" target="_blank" aria-label="Envoyer un e-mail">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://github.com/issahassanyoussouf" target="_blank">
+                <a href="https://github.com/issahassanyoussouf" target="_blank" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/issahassanyoussouf" target="_blank">
+                <a href="https://linkedin.com/in/issahassanyoussouf" target="_blank" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://x.com/IssaHassanYouf" target="_blank">
+                <a href="https://x.com/IssaHassanYouf" target="_blank" aria-label="X (Twitter)">
                     <i class="fab fa-x-twitter"></i>
                 </a>
-                <a href="https://facebook.com/issahassanyoussouf00" target="_blank">
+                <a href="https://facebook.com/issahassanyoussouf00" target="_blank" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
             </div>
         </div>
     </footer>
 
-    <button id="topBtn" class="top-btn" title="Retour en haut">
+    <!-- Bouton retour en haut -->
+    <button id="topBtn" class="top-btn" title="Retour en haut" aria-label="Retour en haut">
         <i class="fas fa-chevron-up"></i>
     </button>
 </body>

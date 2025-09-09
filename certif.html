@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Attestations</title>
 
+    <!-- Fonts et icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Styles et Script -->
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
@@ -16,12 +19,19 @@
     <header class="site-header">
         <div class="container header-inner">
             <div class="brand">Bienvenue sur mon portfolio</div>
+
+            <!-- Bouton menu burger -->
+            <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation -->
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li><a href="about.html" class="nav-link">À propos</a></li>
                     <li><a href="skills.html" class="nav-link">Compétences</a></li>
-                    <li><a href="certif.html" class="nav-link">Attestations</a></li>
+                    <li><a href="certif.html" class="nav-link active">Attestations</a></li>
                     <li><a href="projects.html" class="nav-link">Projets</a></li>
                     <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -30,74 +40,77 @@
         </div>
     </header>
 
+    <!-- Main -->
     <main>
         <section class="container reveal">
             <h1>Attestations</h1>
             <div class="grid skills-grid">
+
                 <div class="skill-card glass">
-                    <h3>Developpement Web via l'Organisation internationale de la Francophonie</h3>
-                    <p>Encours d'obtention.</p>
+                    <h3>Développement Web via l'Organisation Internationale de la Francophonie</h3>
+                    <p>En cours d’obtention.</p>
+                </div>
+
+                <div class="skill-card glass">
+                    <h3>Attestation de fin de stage académique chez Startech Academy</h3>
+                    <p>Du Juin à août 2025</p>
                 </div>
 
                 <div class="skill-card glass">
                     <h3>Complete Ethical Hacking Course 2025 via Udemy</h3>
-                    <p>Obtenue en Août 2025.</p>
+                    <p>Obtenue en août 2025</p>
                 </div>
 
                 <div class="skill-card glass">
-                    <h3>SEC450 - GSOC Prep via Netriders</h3>
-                    <p>Obtenue en Juil 2025.</p>
+                    <h3>Cyber Security Internship chez Future Interns</h3>
+                    <p>Du juil à août 2025</p>
                 </div>
 
                 <div class="skill-card glass">
                     <h3>eCIR Prep via Netriders</h3>
-                    <p>Obtenue en Juil 2025.</p>
+                    <p>Obtenue en juillet 2025</p>
                 </div>
 
                 <div class="skill-card glass">
-                    <h3>
-                        <h3>Cybersecurity Fundamentals via IBM</h3>
-                        <p>Obtenue en Juin 2025.</p>
+                    <h3>Cybersecurity Intern chez Redynox</h3>
+                    <p>Du juin à juil 2025</p>
+                </div>
+
+                <div class="skill-card glass">
+                    <h3>Cybersecurity Fundamentals via IBM</h3>
+                    <p>Obtenue en juin 2025</p>
                 </div>
 
                 <div class="skill-card glass">
                     <h3>Introduction to Cybersecurity via Cisco Networking Academy</h3>
-                    <p>Obtenue en Juin 2025.</p>
+                    <p>Obtenue en juin 2025</p>
                 </div>
 
                 <div class="skill-card glass">
-                    <h3>API Security Fundamentals via APIsec University</h3>
-                    <p>Obtenue en Juin 2025.</p>
+                    <h3>Cybersecurity Professional via Google</h3>
+                    <p>Obtenue en juin 2025</p>
                 </div>
 
                 <div class="skill-card glass">
-                    <h3>Cybersecurity Profestional via Google</h3>
-                    <p>Obtenue en Juin 2025.</p>
-                </div>
-
-                <div class="skill-card glass">
-                    <h3>Concepts de controle d'accès via ISC2</h3>
-                    <p>Obtenue en Mai 2025.</p>
-                </div>
-
-                <div class="skill-card glass">
-                    <h3>Introduction to Cyber Security via Simplilearn</h3>
-                    <p>Obtenue en Mai 2025.</p>
+                    <h3>Concepts de contrôle d’accès via ISC²</h3>
+                    <p>Obtenue en mai 2025</p>
                 </div>
 
                 <div class="skill-card glass">
                     <h3>XSS Exploits and Defenses via The Linux Foundation</h3>
-                    <p>Obtenue en Avril 2025.</p>
+                    <p>Obtenue en avril 2025</p>
                 </div>
 
                 <div class="skill-card glass">
-                    <h3>Suivi de MOOC sur la Cybersécurité via L'ANSSI</h3>
-                    <p>Obtenue en Avril 2025.</p>
+                    <h3>MOOC Cybersécurité via ANSSI</h3>
+                    <p>Obtenue en avril 2025</p>
                 </div>
+
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <p>© 2025 Issa Hassan Youssouf</p>
@@ -120,7 +133,11 @@
             </div>
         </div>
     </footer>
-    <button id="topBtn" class="top-btn" title="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Back to top -->
+    <button id="topBtn" class="top-btn" title="Retour en haut">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 </body>
 
 </html>
