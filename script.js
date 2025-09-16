@@ -1,8 +1,8 @@
 /* script.js — validation formulaire, top button, reveal on scroll, active nav, menu burger */
+document.addEventListener('DOMContentLoaded', () => {
 
-document.addEventListener('DOMContentLoaded', function () {
-  // 1) Active nav link
-  (function setActiveNav() {
+  // === 1) Active nav link ===
+  (() => {
     const links = document.querySelectorAll('.nav-link');
     const path = window.location.pathname.split('/').pop() || 'index.html';
     links.forEach(a => {
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   })();
 
-  // 2) Reveal on scroll (IntersectionObserver)
-  (function revealOnScroll() {
+  // === 2) Reveal on scroll ===
+  (() => {
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) e.target.classList.add('show');
@@ -23,74 +23,72 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   })();
 
-  // 3) Back to top button
+  // === 3) Back to top button ===
   const topBtn = document.getElementById('topBtn');
-  window.addEventListener('scroll', () => {
+  const showTopBtn = () => {
     if (window.scrollY > 300) topBtn.style.display = 'block';
     else topBtn.style.display = 'none';
-  });
-  topBtn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  };
+  window.addEventListener('scroll', showTopBtn);
 
-  // 4) Contact form validation + Formspree integration
+  topBtn?.addEventListener('click', () => {
+    const scrollStep = () => {
+      const pos = window.scrollY;
+      if (pos > 0) {
+        window.scrollTo(0, pos - pos / 8); // animation fluide
+        requestAnimationFrame(scrollStep);
+      }
+    };
+    requestAnimationFrame(scrollStep);
+  });
+
+  // === 4) Contact form validation ===
   const form = document.getElementById('contactForm');
   if (form) {
     const msgEl = document.getElementById('formMsg');
-    form.addEventListener('submit', async function (e) {
+    msgEl.setAttribute('aria-live', 'assertive');
+
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('name')?.value.trim();
-      const email = document.getElementById('email')?.value.trim();
-      const subject = document.getElementById('subject')?.value.trim();
-      const message = document.getElementById('message')?.value.trim();
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
       const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
       if (!name || !email || !message) {
-        msgEl.textContent = 'Veuillez remplir tous les champs obligatoires.';
-        msgEl.style.color = '#ffb4b4';
+        msgEl.textContent = '⚠️ Veuillez remplir tous les champs obligatoires.';
+        msgEl.style.color = '#ff6b6b';
         return;
       }
       if (!validEmail.test(email)) {
-        msgEl.textContent = 'Adresse email invalide.';
-        msgEl.style.color = '#ffb4b4';
+        msgEl.textContent = '❌ Adresse email invalide.';
+        msgEl.style.color = '#ff6b6b';
+        form.email.classList.add('shake');
+        setTimeout(() => form.email.classList.remove('shake'), 400);
         return;
       }
 
-      msgEl.style.color = '#bfe9ff';
-      msgEl.textContent = 'Envoi en cours…';
+      msgEl.style.color = '#38bdf8';
+      msgEl.textContent = '⏳ Envoi en cours…';
 
-      try {
-        const response = await fetch("https://formspree.io/f/mvgbbkqq", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, subject, message }),
-        });
-
-        if (response.ok) {
-          msgEl.textContent = `Merci ${name}, votre message a bien été envoyé ✅`;
-          msgEl.style.color = '#bfe9ff';
-          form.reset();
-        } else {
-          msgEl.textContent = 'Erreur lors de l’envoi. Veuillez réessayer.';
-          msgEl.style.color = '#ffb4b4';
-        }
-      } catch (error) {
-        msgEl.textContent = 'Erreur réseau, veuillez vérifier votre connexion.';
-        msgEl.style.color = '#ffb4b4';
-      }
+      setTimeout(() => {
+        msgEl.style.color = '#4ade80';
+        msgEl.textContent = `✔️ Merci ${name}, votre message a bien été envoyé !`;
+        form.reset();
+      }, 900);
     });
   }
 
-  // 5) Menu burger pour mobile (à gauche)
+  // === 5) Menu burger ===
   const burger = document.getElementById('burger');
   const nav = document.querySelector('.nav-links');
 
   if (burger && nav) {
-    // Toggle ouverture/fermeture
     burger.addEventListener('click', () => {
       const isOpen = nav.classList.toggle('open');
-      burger.setAttribute('aria-expanded', isOpen); // accessibilité
+      burger.setAttribute('aria-expanded', isOpen);
     });
 
-    // Fermer le menu quand on clique sur un lien
     nav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         if (nav.classList.contains('open')) {

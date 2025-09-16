@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Contact</title>
+  <meta name="description" content="Portfolio de Issa Hassan Youssouf - Contactez-moi pour collaborations, projets et opportunités professionnelles.">
+  <title>Contact - Portfolio</title>
 
   <!-- Fonts et Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -22,9 +23,9 @@
       <div class="brand">Bienvenue sur mon portfolio</div>
 
       <!-- Menu burger -->
-      <div class="burger" id="burger">
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
         <i class="fas fa-bars"></i>
-      </div>
+      </button>
 
       <nav>
         <ul class="nav-links" id="nav-links">
@@ -34,7 +35,7 @@
           <li><a href="certif.html" class="nav-link">Attestations</a></li>
           <li><a href="projects.html" class="nav-link">Projets</a></li>
           <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
-          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -48,19 +49,20 @@
         Pour toute demande d'information, de collaboration ou de prise de contact, merci de remplir le formulaire ci-dessous.
       </p>
 
-      <!-- Formulaire de contact -->
-      <form id="contactForm" method="POST">
+      <!-- Contact Form -->
+      <form action="https://formspree.io/f/mvgbbkqq" method="POST" class="contact-form" id="contactForm">
+        
         <label for="name">Nom</label>
-        <input id="name" name="name" type="text" placeholder="Votre nom complet" required>
+        <input id="name" name="name" type="text" placeholder="Votre nom complet" required autocomplete="name" aria-required="true">
 
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="Votre email" required>
+        <input id="email" name="email" type="email" placeholder="Votre email" required autocomplete="email" aria-required="true">
 
         <label for="subject">Sujet</label>
-        <input id="subject" name="subject" type="text" placeholder="Motif de votre message (optionnel)">
+        <input id="subject" name="subject" type="text" placeholder="Motif de votre message (optionnel)" autocomplete="off">
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
+        <textarea id="message" name="message" rows="6" placeholder="Votre message..." required aria-required="true"></textarea>
 
         <!-- Actions -->
         <div class="form-actions">
@@ -77,19 +79,19 @@
   <footer class="site-footer">
     <div class="container">
       <div class="socials small">
-        <a href="mailto:issahasyouf68@yahoo.com" target="_blank" aria-label="Envoyer un e-mail">
+        <a href="mailto:issahasyouf68@yahoo.com" target="_blank" rel="noopener noreferrer" aria-label="Envoyer un e-mail">
           <i class="fas fa-envelope"></i>
         </a>
-        <a href="https://github.com/issahassanyoussouf" target="_blank">
+        <a href="https://github.com/issahassanyoussouf" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://linkedin.com/in/issahassanyoussouf" target="_blank">
+        <a href="https://linkedin.com/in/issahassanyoussouf" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://x.com/IssaHassanYouf" target="_blank">
+        <a href="https://x.com/IssaHassanYouf" target="_blank" rel="noopener noreferrer" aria-label="Profil X (Twitter)">
           <i class="fab fa-x-twitter"></i>
         </a>
-        <a href="https://facebook.com/issahassanyoussouf00" target="_blank">
+        <a href="https://facebook.com/issahassanyoussouf00" target="_blank" rel="noopener noreferrer" aria-label="Profil Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </div>
@@ -98,9 +100,8 @@
   </footer>
 
   <!-- TOP BUTTON -->
-  <button id="topBtn" class="top-btn" title="Retour en haut">
+  <button id="topBtn" class="top-btn" title="Retour en haut" aria-label="Retour en haut">
     <i class="fas fa-chevron-up"></i>
   </button>
 </body>
-
 </html>
